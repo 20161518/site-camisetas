@@ -8,13 +8,15 @@ import { AuthProvider } from '@/context/AuthContext';
 import CartButton from '@/components/CartButton';
 import AudioPlayer from '@/components/AudioPlayer';
 import AccountButton from '@/components/AccountButton';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import Footer from '@/components/Footer';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ONSTAGE - Camisetas Masculinas',
-  description: 'Liquidação de camisetas masculinas. Estoque limitado.',
+  title: 'ONSTAGE - Camisetas Masculinas Exclusivas',
+  description: 'Liquidação de camisetas masculinas. Estoque limitado e peças únicas.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,9 +28,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AuthProvider>
               <AudioProvider>
                 {children}
+                <Footer />
                 <CartButton />
-                <AudioPlayer />
                 <AccountButton />
+                <WhatsAppButton />
+                <AudioPlayer />
               </AudioProvider>
             </AuthProvider>
           </Suspense>
