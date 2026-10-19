@@ -1,17 +1,9 @@
-import type { NextConfig } from "next";
+﻿import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  // Desativado para permitir o uso de datas dinâmicas no rodapé
+  // cacheComponents: true,
+  // partialPrefetching: true,
 };
 
 export default nextConfig;
