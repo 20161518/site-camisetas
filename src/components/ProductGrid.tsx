@@ -81,7 +81,7 @@ export default function ProductGrid() {
             href={`/produto/${product.ref}`}
             className="border rounded-lg overflow-hidden hover:shadow-xl transition group cursor-pointer block"
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-gray-50">
+            <div className="relative aspect-[4/5] overflow-hidden bg-white">
               <img
                 src={product.image_url}
                 alt={product.name}
