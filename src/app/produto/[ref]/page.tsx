@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { Suspense, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -100,8 +100,8 @@ function ProdutoConteudo() {
         <button onClick={() => router.back()} className="text-sm text-gray-500 hover:text-black mb-6">&larr; Voltar</button>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          <div className="relative aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in" onMouseMove={handleMouseMove} onMouseLeave={() => setZoom({ active: false, x: 50, y: 50 })}>
-            <img src={product.image_url} alt={product.name} className="w-full h-full object-cover transition-transform duration-200" style={{ transform: zoom.active ? 'scale(2)' : 'scale(1)', transformOrigin: `${zoom.x}% ${zoom.y}%` }} />
+          <div className="relative aspect-[4/5] bg-white rounded-lg overflow-hidden cursor-zoom-in border" onMouseMove={handleMouseMove} onMouseLeave={() => setZoom({ active: false, x: 50, y: 50 })}>
+            <img src={product.image_url} alt={product.name} className="w-full h-full object-contain p-2 transition-transform duration-200" style={{ transform: zoom.active ? 'scale(2)' : 'scale(1)', transformOrigin: `${zoom.x}% ${zoom.y}%` }} />
           </div>
 
           <div className="flex flex-col">
