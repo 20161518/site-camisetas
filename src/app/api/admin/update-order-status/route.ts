@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
 export async function POST(request: NextRequest) {
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
           'api-key': process.env.BREVO_API_KEY
         },
         body: JSON.stringify({
-          sender: { name: 'Onstage Camisetas', email: 'univer2112@gmail.com' },
+          sender: { name: 'LOJA Camisetas', email: 'univer2112@gmail.com' },
           to: [{ email: pedido.customer_email, name: pedido.customer_name }],
           subject: `Seu pedido #${pedido.id} foi enviado!`,
           htmlContent: `

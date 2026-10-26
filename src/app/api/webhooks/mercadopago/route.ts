@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { MercadoPagoConfig, Payment } from 'mercadopago';
 import { createClient } from '@supabase/supabase-js';
 
@@ -8,7 +8,7 @@ async function enviarEmail(destinatario: string, nome: string, assunto: string, 
     await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'api-key': process.env.BREVO_API_KEY },
-      body: JSON.stringify({ sender: { name: 'Onstage Camisetas', email: 'univer2112@gmail.com' }, to: [{ email: destinatario, name: nome }], subject: assunto, htmlContent: html })
+      body: JSON.stringify({ sender: { name: 'LOJA Camisetas', email: 'univer2112@gmail.com' }, to: [{ email: destinatario, name: nome }], subject: assunto, htmlContent: html })
     });
   } catch (error) { console.error('Erro Brevo:', error); }
 }

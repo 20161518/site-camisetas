@@ -23,7 +23,7 @@ export default function AdminProdutosPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [editingId, setEditingId] = useState<number | null>(null);
   
-  // Estados de edição
+  // Estados de ediÃ§Ã£o
   const [editPrice, setEditPrice] = useState('');
   const [editActive, setEditActive] = useState(true);
   const [editStock, setEditStock] = useState<Record<string, number>>({});
@@ -67,7 +67,7 @@ export default function AdminProdutosPage() {
         .map(s => s.trim().toUpperCase())
         .filter(s => s !== '');
 
-      // Reconstrói o estoque para manter os valores dos tamanhos existentes e zerar os novos
+      // ReconstrÃ³i o estoque para manter os valores dos tamanhos existentes e zerar os novos
       const novoEstoque: Record<string, number> = {};
       novosTamanhos.forEach(tamanho => {
         novoEstoque[tamanho] = editStock[tamanho] || 0;
@@ -92,7 +92,7 @@ export default function AdminProdutosPage() {
       ));
       setEditingId(null);
     } catch (err) {
-      alert('Erro ao salvar as alterações.');
+      alert('Erro ao salvar as alteraÃ§Ãµes.');
     }
   };
 
@@ -102,10 +102,10 @@ export default function AdminProdutosPage() {
     <main className="min-h-screen bg-gray-100">
       <header className="bg-black text-white py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/admin/painel" className="font-black text-xl">ONSTAGE Admin</Link>
+          <Link href="/admin/painel" className="font-black text-xl">LOJA Admin</Link>
           <div className="flex gap-4">
             <Link href="/admin/painel" className="text-sm text-gray-300 hover:text-white">Pedidos</Link>
-            <Link href="/admin/relatorios" className="text-sm text-gray-400 hover:text-white">Relatórios</Link>
+            <Link href="/admin/relatorios" className="text-sm text-gray-400 hover:text-white">RelatÃ³rios</Link>
             <Link href="/admin/cupons" className="text-sm text-gray-400 hover:text-white">Cupons</Link>
             <button onClick={async () => { await supabase.auth.signOut(); router.push('/admin/login'); }} className="text-sm text-red-400 hover:text-red-300 font-bold">Sair</button>
           </div>
@@ -122,11 +122,11 @@ export default function AdminProdutosPage() {
                 <tr className="bg-gray-100 text-left text-gray-600">
                   <th className="px-4 py-3">REF</th>
                   <th className="px-4 py-3">Produto</th>
-                  <th className="px-4 py-3">Preço (R$)</th>
-                  <th className="px-4 py-3">Tamanhos Disponíveis</th>
+                  <th className="px-4 py-3">PreÃ§o (R$)</th>
+                  <th className="px-4 py-3">Tamanhos DisponÃ­veis</th>
                   <th className="px-4 py-3">Estoque por Tamanho</th>
                   <th className="px-4 py-3">Status</th>
-                  <th className="px-4 py-3">Ações</th>
+                  <th className="px-4 py-3">AÃ§Ãµes</th>
                 </tr>
               </thead>
               <tbody>

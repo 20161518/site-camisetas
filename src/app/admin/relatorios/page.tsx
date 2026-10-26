@@ -46,15 +46,15 @@ export default function AdminRelatoriosPage() {
     checkAuth();
   }, [router, filtroDias]);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center">Carregando relatórios...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center">Carregando relatÃ³rios...</div>;
 
-  // Cálculos
+  // CÃ¡lculos
   const faturamentoTotal = orders.reduce((acc, o) => acc + Number(o.total_amount), 0);
   const ticketMedio = orders.length > 0 ? faturamentoTotal / orders.length : 0;
 
   // Vendas por Cidade
   const vendasPorCidade = orders.reduce((acc, order) => {
-    const cidade = order.customer_city || 'Não informada';
+    const cidade = order.customer_city || 'NÃ£o informada';
     if (!acc[cidade]) acc[cidade] = 0;
     acc[cidade] += Number(order.total_amount);
     return acc;
@@ -80,7 +80,7 @@ export default function AdminRelatoriosPage() {
     <main className="min-h-screen bg-gray-100">
       <header className="bg-black text-white py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/admin/painel" className="font-black text-xl">ONSTAGE Admin</Link>
+          <Link href="/admin/painel" className="font-black text-xl">LOJA Admin</Link>
           <div className="flex gap-4">
             <Link href="/admin/painel" className="text-sm text-gray-300 hover:text-white">Pedidos</Link>
             <Link href="/admin/produtos" className="text-sm text-gray-300 hover:text-white">Produtos</Link>
@@ -91,12 +91,12 @@ export default function AdminRelatoriosPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-black">Relatórios de Vendas</h1>
+          <h1 className="text-3xl font-black">RelatÃ³rios de Vendas</h1>
           <select value={filtroDias} onChange={(e) => setFiltroDias(Number(e.target.value))} className="border-2 border-gray-300 rounded-lg px-4 py-2 font-semibold focus:border-black outline-none">
-            <option value={7}>Últimos 7 dias</option>
-            <option value={30}>Últimos 30 dias</option>
-            <option value={90}>Últimos 90 dias</option>
-            <option value={365}>Último ano</option>
+            <option value={7}>Ãšltimos 7 dias</option>
+            <option value={30}>Ãšltimos 30 dias</option>
+            <option value={90}>Ãšltimos 90 dias</option>
+            <option value={365}>Ãšltimo ano</option>
           </select>
         </div>
 
@@ -107,7 +107,7 @@ export default function AdminRelatoriosPage() {
             <p className="text-3xl font-black text-green-600">R$ {faturamentoTotal.toFixed(2).replace('.', ',')}</p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow">
-            <p className="text-sm text-gray-500 mb-1">Ticket Médio</p>
+            <p className="text-sm text-gray-500 mb-1">Ticket MÃ©dio</p>
             <p className="text-3xl font-black">R$ {ticketMedio.toFixed(2).replace('.', ',')}</p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow">
@@ -117,11 +117,11 @@ export default function AdminRelatoriosPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* GRÁFICO DE CIDADES */}
+          {/* GRÃFICO DE CIDADES */}
           <div className="bg-white rounded-xl p-6 shadow">
             <h2 className="text-xl font-bold mb-6">Vendas por Cidade</h2>
             {cidadesOrdenadas.length === 0 ? (
-              <p className="text-gray-500">Nenhuma venda no período.</p>
+              <p className="text-gray-500">Nenhuma venda no perÃ­odo.</p>
             ) : (
               <div className="space-y-4">
                 {cidadesOrdenadas.slice(0, 8).map(([cidade, valor]) => (
@@ -146,7 +146,7 @@ export default function AdminRelatoriosPage() {
           <div className="bg-white rounded-xl p-6 shadow">
             <h2 className="text-xl font-bold mb-6">Top 5 Produtos Mais Vendidos</h2>
             {produtosOrdenados.length === 0 ? (
-              <p className="text-gray-500">Nenhuma venda no período.</p>
+              <p className="text-gray-500">Nenhuma venda no perÃ­odo.</p>
             ) : (
               <div className="space-y-4">
                 {produtosOrdenados.map(([nome, qtd], index) => (

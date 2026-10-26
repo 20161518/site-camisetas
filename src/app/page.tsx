@@ -1,4 +1,4 @@
-﻿import ProductGrid from '@/components/ProductGrid';
+import ProductGrid from '@/components/ProductGrid';
 import Link from 'next/link';
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <header className="bg-black text-white py-16 text-center relative overflow-hidden">
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-6xl md:text-7xl font-black tracking-tight mb-2">
-            ONSTAGE
+            LOJA
           </h1>
           <p className="text-xl text-orange-500 font-bold tracking-widest mb-6">
             FIND YOUR STYLE

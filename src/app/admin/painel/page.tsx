@@ -56,7 +56,7 @@ export default function AdminPainelPage() {
   const atualizarStatus = async (id: number, novoStatus: string) => {
     let tracking = '';
     if (novoStatus === 'shipped') {
-      tracking = window.prompt('Digite o código de rastreio (opcional):') || '';
+      tracking = window.prompt('Digite o cÃ³digo de rastreio (opcional):') || '';
     }
     
     const res = await fetch('/api/admin/update-order-status', {
@@ -94,11 +94,11 @@ export default function AdminPainelPage() {
       <header className="bg-black text-white py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/admin/painel" className="font-black text-xl">
-            ONSTAGE Admin
+            LOJA Admin
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/admin/produtos" className="text-sm text-gray-400 hover:text-white">Produtos</Link>
-            <Link href="/admin/relatorios" className="text-sm text-gray-400 hover:text-white">Relatórios</Link>
+            <Link href="/admin/relatorios" className="text-sm text-gray-400 hover:text-white">RelatÃ³rios</Link>
             <Link href="/admin/cupons" className="text-sm text-gray-400 hover:text-white">Cupons</Link>
             <Link href="/" className="text-sm text-gray-400 hover:text-white">Ver Loja</Link>
             <button onClick={handleLogout} className="text-sm bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-semibold">
@@ -175,7 +175,7 @@ export default function AdminPainelPage() {
                           {o.customer_name}
                           {o.customer_notes && (
                             <span className="ml-2 cursor-help text-orange-500" title={o.customer_notes}>
-                              💬
+                              ðŸ’¬
                             </span>
                           )}
                         </p>

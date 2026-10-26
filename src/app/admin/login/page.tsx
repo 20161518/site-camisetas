@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -42,7 +42,7 @@ export default function AdminLoginPage() {
   return (
     <main className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
-        <h1 className="text-2xl font-black text-center mb-2">ONSTAGE</h1>
+        <h1 className="text-2xl font-black text-center mb-2">LOJA</h1>
         <p className="text-center text-gray-500 text-sm mb-8">Painel Administrativo</p>
 
         {erro && (

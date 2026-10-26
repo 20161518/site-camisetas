@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -87,7 +87,7 @@ export default function AdminCuponsPage() {
     <main className="min-h-screen bg-gray-100">
       <header className="bg-black text-white py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/admin/painel" className="font-black text-xl">ONSTAGE Admin</Link>
+          <Link href="/admin/painel" className="font-black text-xl">LOJA Admin</Link>
           <div className="flex gap-4">
             <Link href="/admin/painel" className="text-sm text-gray-300 hover:text-white">Pedidos</Link>
             <Link href="/admin/produtos" className="text-sm text-gray-300 hover:text-white">Produtos</Link>

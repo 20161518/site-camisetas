@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -84,7 +84,7 @@ export default function KitsPage() {
           <div className="text-6xl font-black text-orange-500 hidden md:block">=</div>
           
           <div className="text-center bg-orange-500 text-black p-8 rounded-3xl transform scale-110 shadow-2xl">
-            <p className="text-lg font-bold mb-2">No Kit Onstage</p>
+            <p className="text-lg font-bold mb-2">No Kit LOJA</p>
             <p className="text-5xl font-black">R$ 189,90</p>
             <p className="text-sm mt-2 font-bold">Apenas R$ 37,98 por camiseta!</p>
           </div>

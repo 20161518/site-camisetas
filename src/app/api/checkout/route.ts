@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { MercadoPagoConfig, Preference } from 'mercadopago';
 import { supabase } from '@/lib/supabase';
 
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
           pending: `${siteUrl}/sucesso`,
         },
         auto_return: 'approved',
-        statement_descriptor: 'ONSTAGE',
+        statement_descriptor: 'LOJA',
         external_reference: `pedido-${Date.now()}`,
       },
     });
