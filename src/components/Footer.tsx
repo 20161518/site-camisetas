@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-black text-white mb-4">LOJA</h3>
             <p className="text-sm mb-4 max-w-sm">
-              A LOJA Ã© especializada em camisetas masculinas com design exclusivo. 
+              A LOJA é especializada em camisetas masculinas com design exclusivo. 
               Encontre seu estilo e destaque-se.
             </p>
             <p className="text-sm">CNPJ: 41.250.413/0001-01</p>
@@ -18,9 +18,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Institucional</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-orange-500 transition">Sobre NÃ³s</Link></li>
-              <li><Link href="/" className="hover:text-orange-500 transition">PolÃ­tica de Trocas</Link></li>
-              <li><Link href="/" className="hover:text-orange-500 transition">PolÃ­tica de Privacidade</Link></li>
+              <li><Link href="/" className="hover:text-orange-500 transition">Sobre Nós</Link></li>
+              <li><Link href="/" className="hover:text-orange-500 transition">Política de Trocas</Link></li>
+              <li><Link href="/" className="hover:text-orange-500 transition">Política de Privacidade</Link></li>
             </ul>
           </div>
 
@@ -28,14 +28,14 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Atendimento</h4>
             <ul className="space-y-2 text-sm">
               <li>WhatsApp: (49) 99917-8914</li>
-              <li>E-mail: contato@LOJA.com.br</li>
-              <li>Seg a Sex - 08h Ã s 18h</li>
+              <li>E-mail: contato@loja.com.br</li>
+              <li>Seg a Sex - 08h às 18h</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p>Â© {new Date().getFullYear()} LOJA Camisetas. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} LOJA Camisetas. Todos os direitos reservados.</p>
           <div className="flex gap-2">
             <span className="bg-gray-800 text-gray-300 px-2 py-1 rounded">Pix</span>
             <span className="bg-gray-800 text-gray-300 px-2 py-1 rounded">Visa</span>
