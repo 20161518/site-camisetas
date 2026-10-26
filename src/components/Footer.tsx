@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p>© {new Date().getFullYear()} LOJA Camisetas. Todos os direitos reservados.</p>
+          <p>© 2026 LOJA Camisetas. Todos os direitos reservados.</p>
           <div className="flex gap-2">
             <span className="bg-gray-800 text-gray-300 px-2 py-1 rounded">Pix</span>
             <span className="bg-gray-800 text-gray-300 px-2 py-1 rounded">Visa</span>
